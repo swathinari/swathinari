@@ -1,4 +1,11 @@
-## Hi there 👋
+## Hi, I'm Swathi 👋
+
+☕ **Java Backend Developer with 3+ years of experience** building APIs, microservices, and event-driven applications with Spring Boot and Kafka.
+
+I believe mastering a concept takes more than learning it once. I keep coming back to the fundamentals, exploring them more deeply, and putting them into practice.
+
+**Learn. Build. Repeat. Master.** 🔁
+
 
 <!--
 **swathinari/swathinari** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
