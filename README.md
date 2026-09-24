@@ -1,6 +1,7 @@
 ## Hi, I'm Swathi Narikadapa 👋
 
 ![Pac-Man contribution graph](https://raw.githubusercontent.com/swathinari/swathinari/output/pacman.svg)
+<img src="assets/minion.gif" alt="Animated Minion" width="180">
 
 
 <!--
