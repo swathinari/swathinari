@@ -1,4 +1,4 @@
-## Hi, I'm Swathi 👋
+## Hi, I'm Swathi Narikadapa 👋
 
 ![Pac-Man contribution graph](https://raw.githubusercontent.com/swathinari/swathinari/output/pacman.svg)
 
