@@ -2,10 +2,6 @@
 // contribution grid, and each square fades out just as he reaches it.
 // Light/dark is handled with a prefers-color-scheme media query, so one file
 // works in both GitHub themes when embedded with <img>.
-import { readFileSync } from "node:fs";
-
-const minionGif = readFileSync(new URL("../assets/minion_bob.gif", import.meta.url));
-const minionImage = `data:image/gif;base64,${minionGif.toString("base64")}`;
 
 const CELL = 12; // square size
 const GAP = 3; // gap between squares
@@ -232,7 +228,8 @@ export function buildSvg(grid) {
   const motion =
     "M" + order.map(([w, d]) => `${round(cx(w))},${round(cy(d))}`).join(" L");
 
- <g class="pac">
+  const pac = `
+  <g class="pac">
     <path d="${pacPath(MOUTH_SHUT)}">
       <animate attributeName="d" dur="${CHOMP}s" repeatCount="indefinite"
         calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"
@@ -241,6 +238,7 @@ export function buildSvg(grid) {
     <animateMotion dur="${dur}s" repeatCount="indefinite" rotate="auto"
       path="${motion}" keyPoints="0;1" keyTimes="0;1" calcMode="linear"/>
   </g>`;
+
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="sans-serif">
   <style>
     :root {
