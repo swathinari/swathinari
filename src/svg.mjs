@@ -235,7 +235,7 @@ export function buildSvg(grid) {
   const pac = `
   <g class="pac">
     <image
-      href="minion_bob.gif"
+      href="assets/minion_bob.gif"
       x="-18" y="-18"
       width="36" height="36"
       preserveAspectRatio="xMidYMid meet"
