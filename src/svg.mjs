@@ -232,23 +232,14 @@ export function buildSvg(grid) {
   const motion =
     "M" + order.map(([w, d]) => `${round(cx(w))},${round(cy(d))}`).join(" L");
 
-  const pac = `
-  <g class="pac">
-    <image
-      href="assets/minion_bob.gif"
-      x="-18" y="-18"
-      width="36" height="36"
-      preserveAspectRatio="xMidYMid meet"
-    />
-    <animateMotion
-      dur="${dur}s"
-      repeatCount="indefinite"
-      rotate="auto"
-      path="${motion}"
-      keyPoints="0;1"
-      keyTimes="0;1"
-      calcMode="linear"
-    />
+ <g class="pac">
+    <path d="${pacPath(MOUTH_SHUT)}">
+      <animate attributeName="d" dur="${CHOMP}s" repeatCount="indefinite"
+        calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"
+        values="${pacPath(MOUTH_SHUT)};${pacPath(MOUTH_OPEN)};${pacPath(MOUTH_SHUT)}"/>
+    </path>
+    <animateMotion dur="${dur}s" repeatCount="indefinite" rotate="auto"
+      path="${motion}" keyPoints="0;1" keyTimes="0;1" calcMode="linear"/>
   </g>`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="sans-serif">
   <style>
